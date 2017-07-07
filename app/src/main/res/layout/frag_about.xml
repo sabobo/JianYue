@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/qrcode_for"
+        android:layout_marginTop="100dp"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="想获取更多有趣内容,就来关注我们\n我们的微信公众:youqu_69"
+        android:id="@+id/textView" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text="欢迎向我们邮箱投稿分享有趣，\n欢迎投递.E-mail:youqu_69@163.com"
+        />
+</LinearLayout>

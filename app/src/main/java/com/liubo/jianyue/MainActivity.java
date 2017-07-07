@@ -1,8 +1,11 @@
 package com.liubo.jianyue;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,10 +15,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+
+import com.liubo.jianyue.Fragment.AboutFragment;
+import com.liubo.jianyue.Fragment.AdvertFragment;
+import com.liubo.jianyue.Fragment.JuanShuFragment;
+import com.liubo.jianyue.Fragment.OneTextFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,9 +46,13 @@ public class MainActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        setTitle(getString(R.string.tngou_news));
+        switchFragment(new JuanShuFragment());
+       // imageView = (ImageView)findViewById(R.id.top_imageView) ;
+//        String img = "http://upload-images.jianshu.io/upload_images/2542851-f1c2aaf98092e68c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/480";
+//        Glide.with(this).load(img).into(imageView);
     }
 
     @Override
@@ -82,20 +95,41 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+            setTitle(getString(R.string.tngou_news));
+            switchFragment(new JuanShuFragment());
         } else if (id == R.id.nav_gallery) {
-
+            setTitle(getString(R.string.tngou_girl));
+            switchFragment(new OneTextFragment());
         } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
+            setTitle(getString(R.string.tngou_game));
+           // startActivity(new Intent(MainActivity.this,MainFragment.class));
+        }else if (id == R.id.nav_share) {
+            setTitle(getString(R.string.my_blog));
+            switchFragment(new AdvertFragment());
         } else if (id == R.id.nav_send) {
-
+            setTitle(getString(R.string.my_about));
+            switchFragment(new AboutFragment());
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
         return true;
     }
+    /**
+     * 切换Fragment
+     */
+
+    public void switchFragment(Fragment newFragment) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.content_frame, newFragment).commit();
+    }
+    public void onResume() {
+        super.onResume();
+       // MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+       //MobclickAgent.onPause(this);
+    }
+
 }

@@ -1,8 +1,15 @@
 <resources>
-    <string name="app_name">JianYue</string>
+    <string name="app_name">简阅</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="tngou_news">简阅时间</string>
+    <string name="tngou_girl">每日一文</string>
+    <string name="tngou_game">游戏一下</string>
+    <string name="my_blog">看广告</string>
+    <string name="my_about">关于</string>
+    <string name="exit_text">再按一次退出程序</string>
 </resources>

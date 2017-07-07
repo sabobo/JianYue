@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/view_top_bar_white" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/article_img"
+                android:visibility="visible"
+                android:layout_margin="16dp"
+                android:layout_width="300dp"
+                android:scaleType="fitXY"
+                android:layout_height="wrap_content"
+                />
+            <WebView
+                android:id="@+id/article_WebView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <com.bastlibrary.utils.JustifyTextView
+                android:id="@+id/article"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:visibility="gone"
+                android:text=""
+                android:textSize="15sp"
+                android:textColor="#333"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
