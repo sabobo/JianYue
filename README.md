@@ -7,9 +7,9 @@
 应用截图:
 
 ![截图1](https://raw.githubusercontent.com/sabobo/JianYue/master/screenshot/device-2017-07-10-161427.png)
-![截图2](https://github.com/sabobo/JianYue/tree/master/screenshot/device-2017-07-10-161448.png)
-![截图3](https://github.com/sabobo/JianYue/tree/master/screenshot/device-2017-07-10-161502.png)
-![截图4](https://github.com/sabobo/JianYue/tree/master/screenshot/device-2017-07-10-161314.png)
+![截图2](https://raw.githubusercontent.com/sabobo/JianYue/master/screenshot/device-2017-07-10-161448.png)
+![截图3](https://raw.githubusercontent.com/sabobo/JianYue/master/screenshot/device-2017-07-10-161502.png)
+![截图4](https://raw.githubusercontent.com/sabobo/JianYue/master/screenshot/device-2017-07-10-161314.png)
 
 特性
 jsoup网页解析库
@@ -31,6 +31,6 @@ Github: https://github.com/sabobo
 
 公众号
 
-![扫一扫](https://github.com/sabobo/JianYue/tree/master/screenshot/20170122224631904.png)
+![扫一扫](https://raw.githubusercontent.com/sabobo/JianYue/master/screenshot/20170122224631904.png)
 
 
