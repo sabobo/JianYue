@@ -20,11 +20,17 @@ butterknife 注解库
 
 关于我
 Name: 莫爷
+
 Email: lb906621525@163.com
+
 CSDN: http://blog.csdn.net/u012162503?viewmode=list
+
 Github: https://github.com/sabobo
+
 微信公众号:moye988
+
 公众号
+
 ![](https://github.com/sabobo/JianYue/tree/master/screenshot/20170122224631904.png)
 
 
