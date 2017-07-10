@@ -6,15 +6,25 @@
 
 应用截图:
 
-![](https://github.com/sabobo/JianYue/tree/master/device-2017-07-10-161427.png)
-![](https://github.com/sabobo/JianYue/tree/master/device-2017-07-10-161448.png)
-![](https://github.com/sabobo/JianYue/tree/master/device-2017-07-10-161502.png)
-![](https://github.com/sabobo/JianYue/tree/master/device-2017-07-10-161314.png)
+![](https://github.com/sabobo/JianYue/tree/master/screenshot/device-2017-07-10-161427.png)
+![](https://github.com/sabobo/JianYue/tree/master/screenshot/device-2017-07-10-161448.png)
+![](https://github.com/sabobo/JianYue/tree/master/screenshot/device-2017-07-10-161502.png)
+![](https://github.com/sabobo/JianYue/tree/master/screenshot/device-2017-07-10-161314.png)
 
 特性
 jsoup网页解析库
 glide图片处理
 xrecyclerview 列表库
 butterknife 注解库
+
+
+关于我
+Name: 莫爷
+Email: lb906621525@163.com
+CSDN: http://blog.csdn.net/u012162503?viewmode=list
+Github: https://github.com/sabobo
+微信公众号:moye988
+公众号
+![](https://github.com/sabobo/JianYue/tree/master/screenshot/20170122224631904.png)
 
 
