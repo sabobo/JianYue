@@ -6,7 +6,7 @@
 
 应用截图:
 
-![截图1](https://github.com/sabobo/JianYue/tree/master/screenshot/device-2017-07-10-161427.png)
+![截图1](https://raw.githubusercontent.com/sabobo/JianYue/master/screenshot/device-2017-07-10-161427.png)
 ![截图2](https://github.com/sabobo/JianYue/tree/master/screenshot/device-2017-07-10-161448.png)
 ![截图3](https://github.com/sabobo/JianYue/tree/master/screenshot/device-2017-07-10-161502.png)
 ![截图4](https://github.com/sabobo/JianYue/tree/master/screenshot/device-2017-07-10-161314.png)
