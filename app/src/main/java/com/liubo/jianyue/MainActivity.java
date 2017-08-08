@@ -21,6 +21,7 @@ import com.liubo.jianyue.Fragment.AboutFragment;
 import com.liubo.jianyue.Fragment.AdvertFragment;
 import com.liubo.jianyue.Fragment.JuanShuFragment;
 import com.liubo.jianyue.Fragment.OneTextFragment;
+import com.vector.update_app.UpdateAppManager;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -53,6 +54,17 @@ public class MainActivity extends AppCompatActivity
        // imageView = (ImageView)findViewById(R.id.top_imageView) ;
 //        String img = "http://upload-images.jianshu.io/upload_images/2542851-f1c2aaf98092e68c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/480";
 //        Glide.with(this).load(img).into(imageView);
+
+//        new UpdateAppManager
+//                .Builder()
+//                //当前Activity
+//                .setActivity(this)
+//                //更新地址
+//                .setUpdateUrl("https://android-arsenal.com/?page=2&sort=created")
+//                //实现httpManager接口的对象
+//                .setHttpManager(new UpdateAppHttpUtil())
+//                .build()
+//                .update();
     }
 
     @Override
@@ -81,6 +93,8 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            setTitle(getString(R.string.tngou_news));
+            switchFragment(new JuanShuFragment());
             return true;
         }
 

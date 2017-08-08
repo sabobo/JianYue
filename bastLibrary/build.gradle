@@ -38,4 +38,6 @@ dependencies {
     //compile 'com.facebook.fresco.helper:fresco-helper:1.5.2'
     // compile 'com.squareup.okhttp3:okhttp:3.8.1'
     compile files('libs/Baidu_MobAds_SDK.jar')
+
+    compile 'com.github.nukc.stateview:library:1.2.1' //显示出错界面
 }

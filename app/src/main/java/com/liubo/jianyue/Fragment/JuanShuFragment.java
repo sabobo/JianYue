@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
+import android.widget.FrameLayout;
 
 import com.baidu.mobad.feeds.BaiduNative;
 import com.baidu.mobad.feeds.NativeErrorCode;
@@ -13,6 +14,8 @@ import com.bastlibrary.adapter.BaseAdapter;
 import com.bastlibrary.api.AppConfig;
 import com.bastlibrary.bast.BaseFragment;
 import com.bastlibrary.utils.DebugLogs;
+import com.bastlibrary.utils.ListUtils;
+import com.bastlibrary.widget.TipView;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.liubo.jianyue.Details;
@@ -36,6 +39,8 @@ import okhttp3.Call;
  */
 
 public class JuanShuFragment extends BaseFragment implements XRecyclerView.LoadingListener{
+    @Bind(R.id.tip_view)
+    TipView mTipView;
     @Bind(R.id.home_recly_view)
     XRecyclerView mRecyclerView;
     MainAdapter mAdapter;
@@ -54,10 +59,12 @@ public class JuanShuFragment extends BaseFragment implements XRecyclerView.Loadi
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setLoadingListener(this);
        // fetchAd(getActivity());
+
     }
 
     @Override
     public void initData() {
+        //mStateView.showLoading();
         OkHttpUtils
                 .get()
                 .url("http://www.jianshu.com")
@@ -66,16 +73,32 @@ public class JuanShuFragment extends BaseFragment implements XRecyclerView.Loadi
                 {
                     @Override
                     public void onError(Call call, Exception e, int id) {
+                        mTipView.show("网络异常");//弹出提示
+                        if (ListUtils.isEmpty(mDatas)) {
+                            //如果一开始进入没有数据
+                            mStateView.showRetry();//显示重试的布局
+                        }
                     }
                     @Override
                     public void onResponse(String response, int id) {
                         //DebugLogs.e("---->"+response);
+                        //如果是第一次获取数据
+
                         parseHtml(response);
                     }
                 });
     }
     private void parseHtml(String html) {
         mDatas = new JsoupTool().getJianshuList(html);
+        if (ListUtils.isEmpty(mDatas)) {
+            if (ListUtils.isEmpty(mDatas)) {
+                //获取不到数据,显示空布局
+                mStateView.showEmpty();
+                return;
+            }
+           mTipView.show();//弹出提示
+           mStateView.showContent();//显示内容
+        }
         mAdapter = new  MainAdapter(mContext,mDatas);
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.setOnItemClickListener(new BaseAdapter.OnItemClickListener() {
@@ -91,6 +114,7 @@ public class JuanShuFragment extends BaseFragment implements XRecyclerView.Loadi
     }
     @Override
     public void onRefresh() {
+        mTipView.show();//弹出提示
         mRecyclerView.refreshComplete();
     }
 

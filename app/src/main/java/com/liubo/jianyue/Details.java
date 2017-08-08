@@ -2,7 +2,9 @@ package com.liubo.jianyue;
 
 import android.os.Build;
 import android.text.method.ScrollingMovementMethod;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -57,7 +59,6 @@ public class Details  extends BaseActivity {
         article.setMovementMethod(ScrollingMovementMethod.getInstance());
         url = getIntent().getStringExtra("deurl");
         DebugLogs.e("----url>" + url);
-
     }
 
     @Override
@@ -159,15 +160,37 @@ public class Details  extends BaseActivity {
         new JsoupTool().getJianshuListDetails(html, new JsoupTool.call() {
             @Override
             public void callStr(String title, String body, String img) {
-                DebugLogs.e("----title>"+title);
-                DebugLogs.e("----body>"+body);
-                DebugLogs.e("----img>"+img);
+                DebugLogs.e("----title>" + title);
+                DebugLogs.e("----body>" + body);
+                DebugLogs.e("----img>" + img);
                 topTitle.setText(title);
-                Glide.with(mContext).load("http:"+img).into(article_img);
+                Glide.with(mContext).load("http:" + img).into(article_img);
                 mWebview.loadData(body, "text/html; charset=UTF-8", null);
             }
         });
+    }
+        /**
+         * 添加水印
+         */
+        private void addWaterMarkView() {
+            View waterMarkView = LayoutInflater.from(this)
+                    .inflate(R.layout.layout_watermark,null);
+            getRootView().addView(waterMarkView,0);
+        }
 
+        /**
+         * 获取根布局DecorView
+         * @return
+         */
+        private ViewGroup getRootView() {
+            ViewGroup rootView = (ViewGroup)findViewById(android.R.id.content);
+            return rootView;
+        }
+
+    @Override
+    protected void onStart() {
+        addWaterMarkView();
+        super.onStart();
     }
 
 

@@ -1,0 +1,23 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <style name="top_txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!--显示提示的View-->
+    <declare-styleable name="TipView">
+        <attr name="tipBackgroundColor" format="color"/>
+        <attr name="tipTextColor" format="color"/>
+        <attr name="tipText" format="string"/>
+        <attr name="tipTextSize" format="dimension"/>
+    </declare-styleable>
+</resources>

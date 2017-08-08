@@ -68,32 +68,6 @@ public class SplashActivity extends BaseActivity {
         mCountDownTimer.start();
         //这是一个 Handler 里面的逻辑是从 Splash 界面跳转到 Main 界面，这里的逻辑每个公司基本上一致
         tmpHandler.postDelayed(runnable, 3000);
-//        SplashAdListener listener = new SplashAdListener() {
-//            @Override
-//            public void onAdDismissed() {
-//                Log.i("RSplashActivity", "onAdDismissed");
-//                jumpWhenCanClick(); // 跳转至您的应用主界面
-//            }
-//
-//            @Override
-//            public void onAdFailed(String arg0) {
-//                Log.i("RSplashActivity", "onAdFailed");
-//                jump();
-//            }
-//
-//            @Override
-//            public void onAdPresent() {
-//                Log.i("RSplashActivity", "onAdPresent");
-//            }
-//
-//            @Override
-//            public void onAdClick() {
-//                Log.i("RSplashActivity", "onAdClick");
-//                // 设置开屏可接受点击时，该回调可用
-//            }
-//        };
-//        String adPlaceId = "2058622"; // 重要：请填上您的广告位ID，代码位错误会导致无法请求到广告
-//        new SplashAd(this, adsParent, listener, adPlaceId, true);
     }
     @Override
     protected int getLayoutResource() {

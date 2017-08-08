@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BastLibrary</string>
+    <!--异常提示 -->
+    <string name="toast_nodata">没有了!</string>
+    <string name="toast_homenodata">暂无优惠券!</string>
+    <string name="toast_noserver">服务器异常，请稍后!</string>
+    <string name="toast_nonetwork">网络异常，请重试!</string>
+    <string name="toast_exit">再按一次，退出应用 !</string>
+
+    <string name="net_error_msg">网络不给力</string>
+</resources>

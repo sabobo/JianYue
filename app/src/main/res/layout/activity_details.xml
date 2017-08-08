@@ -12,6 +12,16 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <com.bastlibrary.utils.WaterMarkText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="FreeStyle"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="25sp"
+                app:degree="350"
+                />
             <ImageView
                 android:id="@+id/article_img"
                 android:visibility="visible"
